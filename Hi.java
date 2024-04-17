@@ -39,47 +39,43 @@ public class Hi{
         
         int sunkShips = 0;
         
-        // Iterate through the board to count ships
-        for (int row = 0; row < board.length; row++) {
-            for (int col = 0; col < board[0].length; col++) {
-                // If the current position is part of the ship
-                if (board[row][col] == 'S' || board[row][col] == '*') {
-                    // Check if this position belongs to the specified ship type
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == 'S' || board[i][j] == '*') {
                     int shipLength = sizesOfShipTypes.get(typeOfShip);
                     boolean isPartOfShip = true;
-                    for (int i = 1; i < shipLength; i++) {
-                        if (col + i >= board[0].length || board[row][col + i] != 'S') {
+                    for (int k = 1; k < shipLength; k++) {
+                        if (j + k >= board[0].length || board[i][j + k] != 'S') {
                             isPartOfShip = false;
                             break;
                         }
                     }
                     if (isPartOfShip) {
-                        // Check if this ship matches the specified damage type
                         switch (damageTypeOfShip) {
                             case "undamaged":
-                                if (board[row][col] == 'S') {
-                                    sunkShips++;
+                                if (board[i][j] == 'S') {
+                                    sunkShips += 1;
                                 }
                                 break;
                             case "damaged":
-                                if (board[row][col] == '*') {
-                                    sunkShips++;
+                                if (board[i][j] == '*') {
+                                    sunkShips += 1;
                                 }
                                 break;
                             case "sunk":
                                 boolean isSunk = true;
-                                for (int i = 0; i < shipLength; i++) {
-                                    if (board[row][col + i] != '*') {
+                                for (int k = 0; k < shipLength; k++) {
+                                    if (board[i][j + k] != '*') {
                                         isSunk = false;
                                         break;
                                     }
                                 }
                                 if (isSunk) {
-                                    sunkShips++;
+                                    sunkShips += 1;
                                 }
                                 break;
                             case "all":
-                                sunkShips++;
+                                sunkShips += 1;
                                 break;
                         }
                     }
@@ -96,7 +92,7 @@ public class Hi{
             {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
             {'.', '.', '.', '.', 'S', 'S', '.', '.', '.', '.'},
             {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
-            {'.', '.', '.', 'S', 'S', 'S', 'S', 'S', '.', '.'},
+            {'.', '.', '.', 'S', 'S', 'S', 'S', '*', '.', '.'},
             {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
             {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
             {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.'},
