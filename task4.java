@@ -4,11 +4,11 @@ public class task4 {
     public static int checkSquare(int r, char c, char[][] board){
 
         if (r < 1 || r>10){
-            return 0;
+            return 0; // row number is invalid
         }
 
         if (!(c == 'A' || c == 'B' || c == 'C' || c == 'D' || c == 'E' || c == 'F' || c == 'G' || c == 'H' || c == 'I' || c == 'J')){
-            return 1;
+            return 1; // column number is invalid
         }
 
         HashMap<Character, Integer> map = new HashMap<>();
@@ -27,15 +27,15 @@ public class task4 {
         char square = board[r-1][map.get(c)];
 
         if (square == 'S'){
-            return 2;
+            return 2; // hit S
         }
 
         if (square == '.'){
-            return 3;
+            return 3; // hit . 
         }
 
         if (square == '*'){
-            return 4;
+            return 4; // hit *
         }
 
         return 5;

@@ -8,7 +8,7 @@ public class task1 {
         return true;
     }
     public static void main(String[] args){
-        char s = '.';
+        char s = '*';
         System.out.println(checkCharacter(s));
     }
 }

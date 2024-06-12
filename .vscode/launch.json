@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "bonus",
+            "request": "launch",
+            "mainClass": "bonus",
+            "projectName": "Battleship"
+        },
+        {
+            "type": "java",
+            "name": "task5",
+            "request": "launch",
+            "mainClass": "task5",
+            "projectName": "Battleship"
+        },
+        {
+            "type": "java",
+            "name": "task3",
+            "request": "launch",
+            "mainClass": "task3",
+            "projectName": "Battleship"
+        },
+        {
+            "type": "java",
+            "name": "bonus",
+            "request": "launch",
+            "mainClass": "bonus",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
+            "name": "task5555",
+            "request": "launch",
+            "mainClass": "task5555",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
+            "name": "task55",
+            "request": "launch",
+            "mainClass": "task55",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
+            "name": "ShipChecker",
+            "request": "launch",
+            "mainClass": "ShipChecker",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
+            "name": "isValidBoard",
+            "request": "launch",
+            "mainClass": "isValidBoard",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
+            "name": "coderunnertask1",
+            "request": "launch",
+            "mainClass": "coderunnertask1",
+            "projectName": "Battleship_a8c74523"
+        },
+        {
+            "type": "java",
             "name": "Hi",
             "request": "launch",
             "mainClass": "Hi",
